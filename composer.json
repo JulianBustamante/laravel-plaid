@@ -1,0 +1,57 @@
+{
+    "name": "julianbustamante/laravel-plaid",
+    "description": "Laravel Plaid API integration package",
+    "keywords": [
+        "api",
+        "plaid",
+        "plaid-client",
+        "laravel",
+        "laravel-plaid"
+    ],
+    "homepage": "https://github.com/julianbustamante/laravel-plaid",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julian Bustamante",
+            "email": "julian.bustamante@pixelula.com",
+            "homepage": "https://github.com/julianbustamante",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "julianbustamante/plaid-client": "^1.0"
+    },
+    "require-dev": {
+        "larapack/dd": "^1.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JulianBustamante\\Laravel\\Plaid\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JulianBustamante\\Laravel\\Plaid\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JulianBustamante\\Laravel\\Plaid\\PlaidServiceProvider"
+            ],
+            "aliases": {
+                "Plaid": "JulianBustamante\\Laravel\\Plaid\\Facades\\Plaid"
+            }
+        }
+    }
+}
